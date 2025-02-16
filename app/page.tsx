@@ -5,7 +5,6 @@ import { DepartmentList } from "@/components/sections/DepartmentList";
 export default function Home() {
   return (
     <div>
-      {/* <GridDepartments /> */}
       <DepartmentList />
       <AboutMayor />
       <Articles />
