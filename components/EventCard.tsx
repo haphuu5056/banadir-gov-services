@@ -1,5 +1,5 @@
 import { CalendarDays, MapPin } from "lucide-react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 
 interface EventCardProps {
@@ -18,7 +18,7 @@ export function EventCard({
   href,
 }: EventCardProps) {
   return (
-    <Link
+    (<Link
       href={href}
       className="group block"
       aria-labelledby={`event-${title.toLowerCase().replace(/\s+/g, "-")}`}
@@ -28,7 +28,7 @@ export function EventCard({
           <Image
             src={image || "/placeholder.svg"}
             alt=""
-            fill
+            layout="fill"
             className="object-cover rounded-xl"
             sizes="(min-width: 1280px) 400px, (min-width: 768px) 33vw, 100vw"
           />
@@ -57,6 +57,6 @@ export function EventCard({
           {/* <p className="text-gray-600 line-clamp-2">{description}</p> */}
         </div>
       </article>
-    </Link>
+    </Link>)
   );
 }

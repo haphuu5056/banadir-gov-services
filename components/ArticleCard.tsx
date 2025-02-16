@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/legacy/image"
 import Link from "next/link"
 
 interface ArticleCardProps {
@@ -10,13 +10,13 @@ interface ArticleCardProps {
 
 export function ArticleCard({ image, department, title, href }: ArticleCardProps) {
   return (
-    <Link href={href} className="group block" aria-labelledby={`article-${title.toLowerCase().replace(/\s+/g, "-")}`}>
+    (<Link href={href} className="group block" aria-labelledby={`article-${title.toLowerCase().replace(/\s+/g, "-")}`}>
       <article className=" overflow-hidden transition-transform duration-200 hover:scale-[1.02]">
         <div className="relative rounded-xl aspect-[16/10] w-full">
           <Image
             src={image || "/placeholder.svg"}
             alt=""
-            fill
+            layout="fill"
             className="object-cover rounded-xl"
             sizes="(min-width: 1280px) 400px, (min-width: 768px) 33vw, 100vw"
           />
@@ -31,7 +31,7 @@ export function ArticleCard({ image, department, title, href }: ArticleCardProps
           </h3>
         </div>
       </article>
-    </Link>
-  )
+    </Link>)
+  );
 }
 

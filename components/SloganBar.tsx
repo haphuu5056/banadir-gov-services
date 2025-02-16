@@ -1,7 +1,7 @@
 "use client";
 
 import { AlertCircle, Megaphone, Calendar } from "lucide-react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import React, { useEffect, useState } from "react";
 import img from "@/public/amiir.png";
 const announcements = [

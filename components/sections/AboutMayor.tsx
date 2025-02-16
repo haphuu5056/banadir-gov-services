@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import mayorImg from "@/public/mayor.png";
 
 export function AboutMayor() {
