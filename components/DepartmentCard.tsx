@@ -19,12 +19,11 @@ export default function DepartmentCard({
   bg,
   textColor,
   isCompact,
-  
 }: DepartmentCardProps) {
   const className = `border-none shadow-none transition-all duration-500  cursor-pointer  group rounded-xl`;
   return (
     <div
-      className={`${bg} ${className}  ${span} ${
+      className={`${bg} ${className}   ${span} ${
         bg.includes("#3F479E") && bg.includes("#5f60bc")
           ? "hover:from-[#453c9e] hover:to-[#5557ac]"
           : "hover:from-[#FFE4E4] hover:to-[#FFF1F1]"
