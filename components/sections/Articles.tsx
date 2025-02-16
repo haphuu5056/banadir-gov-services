@@ -4,7 +4,7 @@ import { articles } from "@/data/articles";
 export function Articles() {
   return (
     <section className="py-16 " aria-labelledby="articles-heading">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-12">
         <h2 id="articles-heading" className="text-3xl font-semibold text-primary mb-8">
           Articles
         </h2>

@@ -31,11 +31,11 @@ export function SloganBar() {
   }, []);
 
   return (
-    <div className=" py-2  border-b">
+    <section className=" py-4  border-b">
       <div className="container mx-auto px-12 flex flex-col md:flex-row justify-between items-center gap-6">
         {/* Left side - Announcement */}
         <div className="w-full md:w-2/3">
-          <div className="bg-white  p-4 flex items-center space-x-4">
+          <div className="bg-white   flex items-center space-x-4">
             <div className="flex-shrink-0 w-10 h-10 bg-violet-50 rounded-full flex items-center justify-center">
               {announcements[currentAnnouncement].icon &&
                 React.createElement(announcements[currentAnnouncement].icon, {
@@ -69,6 +69,6 @@ export function SloganBar() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

@@ -7,6 +7,7 @@ export const departments = [
     span: "col-span-1 row-span-4",
     bg: "bg-gradient-to-br from-[#FFF1F1] to-[#FFE4E4]",
     textColor: "text-primary",
+    
   },
   {
     title: "Waaxda Arimaha Bulshada iyo wacyigelinta",
@@ -17,7 +18,7 @@ export const departments = [
       "Daddhigista",
     ],
     span: "col-span-1 row-span-3 row-start-5",
-    bg: "bg-gradient-to-br from-[#3F479E] to-[#5f60bc] text-white hover:from-[#4338CA] hover:to-[#6366F1]",
+    bg: "bg-gradient-to-br from-[#3F479E] to-[#5f60bc]  ",
   },
   {
     title: "Waaxda Maamulka Iyo Maaliyada",
