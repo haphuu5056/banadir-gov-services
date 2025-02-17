@@ -24,7 +24,7 @@ export default function DepartmentCard({
   return (
     <div
       className={`${bg} ${className}   ${span} ${
-        bg.includes("#3F479E") && bg.includes("#5f60bc")
+        bg?.includes("#3F479E") && bg.includes("#5f60bc")
           ? "hover:from-[#453c9e] hover:to-[#5557ac]"
           : "hover:from-[#FFE4E4] hover:to-[#FFF1F1]"
       } ${image ? " h-full flex flex-col relative" : ""} `}

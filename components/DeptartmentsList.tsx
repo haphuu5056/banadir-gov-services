@@ -2,7 +2,7 @@ import { departments, districts } from "@/data/departments";
 import DepartmentCard from "@/components/DepartmentCard";
 import Link from "next/link";
 
-export function DepartmentList() {
+export function DepartmentLists() {
   return (
     <div className="py-12 grid grid-cols-3 auto-rows-max gap-6 container mx-auto px-12 overflow-hidden">
       {departments.map((department, index) => (
