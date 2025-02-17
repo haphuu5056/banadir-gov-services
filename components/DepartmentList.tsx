@@ -65,7 +65,7 @@ const DepartmentList = () => {
           <Link href="" className="hover:underline">
             Daqliyadda iyo Ganaaxyadda
           </Link>
-          <Link href="" className="hover:underline">
+          <Link href="departments/maamulka-maaliyadda/canshuuraha" className="hover:underline">
             Canshuuraha
           </Link>
           <Link href="" className="hover:underline">

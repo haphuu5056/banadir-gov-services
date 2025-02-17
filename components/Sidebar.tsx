@@ -70,14 +70,14 @@ const Sidebar = () => {
                     onClick={toggleDepartment}
                     />
                 </div>
-                <div className="flex flex-col gap-y-3 ">
+                <div className="flex flex-col  ">
                   {openDepartment &&
                   department.items?.map((item) => (
                     <Link
                       href={`/departments/${department.id}/${item.id}`}
                       onClick={handleSubserviceClick}
                       key={item.title}
-                      className="text-[#13174b] text-lg "
+                      className="text-[#13174b] text-lg hover:bg-[#13174b]/20 hover:rounded-lg p-2"
                     >
                       {item.title}
                     </Link>
