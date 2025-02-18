@@ -11,7 +11,7 @@ interface Section {
     isBold?: boolean;
   }[];
   image?: {
-    src: string;
+    src: object;
     alt: string;
   };
 }
