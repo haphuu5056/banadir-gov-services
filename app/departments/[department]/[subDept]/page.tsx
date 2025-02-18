@@ -20,7 +20,6 @@ export default function SubDepartmentPage({ params }: PageProps) {
     <div className="container mx-auto py-8">
       <h1 className="text-2xl font-bold text-[#3F479E] mb-4">{department.title}</h1>
       <h2 className="text-xl text-[#3F479E] mb-6">{subDepartment.title}</h2>
-      {/* Add your sub-department specific content here */}
     </div>
   )
 }

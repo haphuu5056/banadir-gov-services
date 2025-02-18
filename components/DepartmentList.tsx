@@ -29,7 +29,7 @@ const DepartmentList = () => {
         </div>
 
         <div className="bg-gradient-to-br from-[#3F479E] to-[#5f60bc] block group text-white border-none shadow-none transition-all duration-300 px-8 py-10 rounded-lg  col-span-1 row-span-3 row-start-5  ">
-          <Link href="/departments/">
+          <Link href="/departments/arimaha-bulshada">
             <h2 className="text-2xl font-bold mb-5 hover:underline">
               Waaxda Arimaha Bulshada iyo wacyigelinta
             </h2>
@@ -56,7 +56,7 @@ const DepartmentList = () => {
           </div>
         </div>
         <div className="bg-[#3F479E] py-7 px-8 rounded-lg  col-span-1 row-span-2 col-start-2 row-start-1 bg-gradient-to-br from-[#3F479E] to-[#5f60bc] block group text-white border-none shadow-none transition-all duration-300 ">
-          <Link href="/departments/">
+          <Link href="/departments/maamulka-maaliyadda">
             <h2 className="text-2xl font-bold mb-5  text-wrap hover:underline">
               Waaxda Maamulka Iyo <br /> Maaliyada
             </h2>
