@@ -30,7 +30,7 @@ function FooterColumn({ title, links }: FooterColumnProps) {
 export function Footer() {
   return (
     <footer className="bg-white  py-16">
-      <div className="container mx-auto  ">
+      <div className="container mx-auto px-4 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-10">
           {/* Logo and Address */}
           <div className="lg:col-span-2">
@@ -81,7 +81,7 @@ export function Footer() {
           </div>
           <div>
             <h2 className="text-2xl font-semibold text-[#0B0B41] mb-5"> Social Media</h2>
-          <div className="grid grid-cols-3 gap-4">
+          <div className="flex gap-6 flex-wrap">
               <Link href="#" className="text-gray-500 hover:text-primary">
                 <Instagram className="h-6 w-6" />
               </Link>

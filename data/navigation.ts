@@ -1,15 +1,35 @@
 import type { Department } from "@/types/departments"
+import {  Building2,
+  Phone,
+  Users,
+  Flame,
+  Heart,
+  Trash2,
+  HandIcon as PrayingHands,
+  Droplet,
+  BriefcaseBusiness,
+  Receipt,
+  Wallet,
+  Calculator,
+  PiggyBank,
+  ShoppingCart,
+  FileText,
+  ClipboardList,
+  MapPin,
+  Wrench,
+  Zap,
+  Home, } from "lucide-react"
 
-export interface NavItem {
-  id: string
-  title: string
-}
+// export interface NavItem {
+//   id: string
+//   title: string
+// }
 
-export interface NavSection {
-  id: string
-  title: string
-  items: NavItem[]
-}
+// export interface NavSection {
+//   id: string
+//   title: string
+//   items: NavItem[]
+// }
 
 // export const navigationData: Department[] = [
 //   {
@@ -164,10 +184,12 @@ export const navigationData: Department[] = [
       {
         id: "guddoomiyaha",
         title: "Xafiiska Guddoomiyaha Gobolka Ahna Duqa Magaalada",
+        icon: Building2,
       },
       {
         id: "isgaarsiinta",
         title: "Isgaarsiinta iyo Tiknolojiyada",
+        icon: Phone,
       },
     ],
   },
@@ -178,26 +200,32 @@ export const navigationData: Department[] = [
       {
         id: "waxbarashada",
         title: "Waxbarshada",
+        icon: Users,
       },
       {
         id: "dabdemiska",
         title: "Dabdemiska iyo Gargaarka degdega",
+        icon: Flame,
       },
       {
         id: "caafimaadka",
         title: "Caafimaadka",
+        icon: Heart,
       },
       {
         id: "nadaafadda",
-        title: "Nadaafadda iyo bilic soocelinta",
+        title: "Nadaafadda iyo biilic soocelinta",
+        icon: Trash2,
       },
       {
         id: "diinta",
         title: "Diinta iyo Awqaafta",
+        icon: PrayingHands,
       },
       {
         id: "biyaha",
         title: "Biyaha iyo Degaanka",
+        icon: Droplet,
       },
       // {
       //   id: "kaluumaysiga",
@@ -230,38 +258,44 @@ export const navigationData: Department[] = [
     ],
   },
   {
-    id: "maamulka-maaliyadda",
+    id: "maamulka-maaliyada",
     title: "Waaxda Maamulka iyo Maaliyadda",
     items: [
       {
         id: "shaqada",
         title: "Shaqadda iyo Shaqaalaha",
+        icon: BriefcaseBusiness,
       },
       {
-        id: "daqliyadda",
+        id: "daqliyada",
         title: "Daqliyadda iyo Ganaaxyadda",
+        icon: Receipt,
       },
       {
-        id: "maamulka-maaliyadda",
-        title: "Maamulka maaliyadda",
+        id: "maamulka-maaliyada",
+        title: "Maamulka iyo Maaliyadaa",
+        icon: Wallet,
       },
       {
         id: "canshuuraha",
         title: "Canshuuraha",
+        icon: Calculator,
+      },
+      {
+        id: "bangiyada",
+        title: "Bangiyada",
+        icon: PiggyBank,
       },
       {
         id: "adeegyada",
         title: "Adeegyada",
-      },
-      {
-        id: "qasnadda",
-        title: "Qasnadda",
+        icon: ShoppingCart,
       },
     ],
   },
   {
-    id: "amniga-siyaasadda",
-    title: "Waaxda Amniga iyo Siyaasadda",
+    id: "amniga-siyaasada",
+    title: "Waaxda Amniga iyo Siyaasada",
     items: [
       {
         id: "amniga",
@@ -290,12 +324,14 @@ export const navigationData: Department[] = [
     title: "Xogheynta Guud",
     items: [
       {
-        id: "keyda-xogta",
+        id: "keydka-xogta",
         title: "Keyda xogta",
+        icon: FileText,
       },
       {
         id: "qorsheynta",
         title: "Qorsheynta iyo kormeerka",
+        icon: ClipboardList,
       },
     ],
   },
@@ -306,26 +342,30 @@ export const navigationData: Department[] = [
       {
         id: "maamulka-dhulka",
         title: "Maamulka Dhulka",
+        icon: MapPin,
+      },
+      {
+        id: "farsamada",
+        title: "Farsamada",
+        icon: Wrench,
+      },
+      {
+        id: "korontada",
+        title: "Korontada iyo Solarka",
+        icon: Zap,
+      },
+      {
+        id: "dhismaha",
+        title: "Dhismaha Wadaaga",
+        icon: Home,
       },
       {
         id: "biyomareenada",
         title: "Biyomareenada iyo Jidadka",
       },
       {
-        id: "korontada",
-        title: "Korontada iyo Solarka",
-      },
-      {
-        id: "farsamada",
-        title: "Farsamada",
-      },
-      {
         id: "gaadiidka",
         title: "Gaadiidka",
-      },
-      {
-        id: "dhisma-wadaaga",
-        title: "Dhisma Wadaaga",
       },
     ],
   },

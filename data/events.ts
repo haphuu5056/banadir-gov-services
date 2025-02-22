@@ -3,7 +3,7 @@ export const events = [
     image: "https://plus.unsplash.com/premium_photo-1675865393275-e640ae777e9f?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     date: "Feb 20, 2024",
     title: "Shirweynaha Horumarinta Magaalada",
-    location: "Banadir Regional Administration HQ",
+    location: "Banadir Regional HQ",
     href: "#",
   },
   {

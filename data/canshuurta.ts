@@ -1,3 +1,4 @@
+import { StaticImageData } from "next/image";
 import img1 from "../public/Rectangle 75.png";
 import img2 from "../public/Rectangle 76.png";
 
@@ -7,7 +8,7 @@ interface ContentItem {
 }
 
 interface ImageItem {
-  src: object;
+  src: StaticImageData;
   alt: string;
 }
 

@@ -3,7 +3,7 @@ import { Mail, MapPin } from "lucide-react"
 
 export function ContactBar() {
   return (
-    <div className="bg-primary text-white py-3 px-4 md:px-8">
+    <div className="bg-primary text-white py-3 px-4 md:px-8 hidden md:block">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-sm">
         <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
           <div className="flex items-center gap-2">

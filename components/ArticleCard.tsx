@@ -5,13 +5,13 @@ interface ArticleCardProps {
   image: string
   department: string
   title: string
-  href: string
+  slug: string
 }
 
-export function ArticleCard({ image, department, title, href }: ArticleCardProps) {
+export function ArticleCard({ image, department, title, slug }: ArticleCardProps) {
   return (
-    (<Link href={href} className="group block" aria-labelledby={`article-${title.toLowerCase().replace(/\s+/g, "-")}`}>
-      <article className=" overflow-hidden transition-transform duration-200 hover:scale-[1.02]">
+    (<Link href={`/articles/${slug}`} className="group block" aria-labelledby={`article-${slug}`}>
+      <article className=" overflow-hidden transition-transform duration-200 md:hover:scale-[1.02]">
         <div className="relative rounded-xl aspect-[16/10] w-full">
           <Image
             src={image || "/placeholder.svg"}

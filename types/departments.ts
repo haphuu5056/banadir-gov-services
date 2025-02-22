@@ -5,6 +5,10 @@
 //   className?: string
 //   textColor?: string
 //   isCompact?: boolean
+
+import { LucideIcon } from "lucide-react"
+
+
 // }
 export interface Department {
   id: string
@@ -15,9 +19,11 @@ export interface Department {
   isCompact?: boolean
 }
 
+
 export interface SubDepartment {
   id: string
   title: string
+  icon?: LucideIcon
 }
 
 export interface DepartmentParams {

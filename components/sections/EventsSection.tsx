@@ -4,7 +4,7 @@ import { EventCard } from "../EventCard";
 export function EventsSection() {
   return (
     <section className="py-16  bg-white" aria-labelledby="events-heading">
-      <div className="container mx-auto px-12">
+      <div className="container mx-auto px-4 lg:px-12">
         <h2
           id="events-heading"
           className="text-3xl font-semibold text-primary mb-8"

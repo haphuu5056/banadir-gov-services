@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 interface ContentItem {
   text: string;
@@ -9,7 +9,7 @@ interface Section {
   title: string;
   content: ContentItem[];
   image?: {
-    src: string;
+    src: string | StaticImageData;
     alt: string;
   };
 }

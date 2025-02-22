@@ -28,7 +28,7 @@ export default function RootLayout({
         <ContactBar />
         <Header />
         <SloganBar />
-        <main className="">
+        <main className="min-h-screen">
         {children}
         </main>
         <Footer />
