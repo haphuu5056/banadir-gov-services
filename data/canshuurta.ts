@@ -1,23 +1,7 @@
 import img1 from "../public/Rectangle 75.png";
 import img2 from "../public/Rectangle 76.png";
 
-interface ContentItem {
-  text: string;
-  isBold?: boolean;
-}
-
-interface ImageItem {
-  src: object;
-  alt: string;
-}
-
-interface Section {
-  title: string;
-  content: ContentItem[];
-  image?: ImageItem;
-}
-
-export const taxPaymentData: { sections: Section[] } = {
+export const taxPaymentData = {
   sections: [
     {
       title: "Sida Loo Bixiyo Canshuurta",

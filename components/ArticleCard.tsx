@@ -10,7 +10,7 @@ interface ArticleCardProps {
 
 export function ArticleCard({ image, department, title, href }: ArticleCardProps) {
   return (
-    (<Link href={href} className="group block" aria-labelledby={`article-${title.toLowerCase().replace(/\s+/g, "-")}`}>
+    (<Link href={'/articles'} className="group block" aria-labelledby={`article-${title.toLowerCase().replace(/\s+/g, "-")}`}>
       <article className=" overflow-hidden transition-transform duration-200 hover:scale-[1.02]">
         <div className="relative rounded-xl aspect-[16/10] w-full">
           <Image

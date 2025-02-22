@@ -4,12 +4,12 @@ import { cn } from "@/lib/utils"
 
 
 const gradientClasses = [
-  "bg-gradient-to-br from-[#E8E9FF] to-[#F1F1FB] hover:from-[#D8DAFF] hover:to-[#E8E9FF] text-[#3F479E]",
-  "bg-gradient-to-br from-[#E6EEF8] to-[#F0F4FA] hover:from-[#D6E4F0] hover:to-[#E6EEF8] text-[#2C3E50]",
-  "bg-gradient-to-br from-[#E8F4EA] to-[#F1F8F2] hover:from-[#D8ECD8] hover:to-[#E8F4EA] text-[#2F4F4F]",
-  "bg-gradient-to-br from-[#F0EBE3] to-[#F5F2EC] hover:from-[#E6DFD1] hover:to-[#F0EBE3] text-[#5D4037]",
-  "bg-gradient-to-br from-[#E6F3F3] to-[#F0F8F8] hover:from-[#D1EDED] hover:to-[#E6F3F3] text-[#006064]",
-]
+  "bg-gradient-to-br from-[#C5C8FF] to-[#D8DAFF] hover:from-[#B0B4FF] hover:to-[#C5C8FF] text-[#3F479E]",
+  "bg-gradient-to-br from-[#C5D8F0] to-[#D6E4F0] hover:from-[#A8C4E0] hover:to-[#C5D8F0] text-[#2C3E50]",
+  "bg-gradient-to-br from-[#C5E8C5] to-[#D8ECD8] hover:from-[#A8D8A8] hover:to-[#C5E8C5] text-[#2F4F4F]",
+  "bg-gradient-to-br from-[#E0D8C5] to-[#E6DFD1] hover:from-[#D0C0A8] hover:to-[#E0D8C5] text-[#5D4037]",
+  "bg-gradient-to-br from-[#C5E8E8] to-[#D1EDED] hover:from-[#A8D8D8] hover:to-[#C5E8E8] text-[#006064]",
+];
 
 interface PageProps {
   params: {
@@ -39,7 +39,7 @@ export default function DepartmentPage({ params }: PageProps) {
             key={subDept.id}
             href={`/departments/${encodeURIComponent(params.department)}/${encodeURIComponent(subDept.id)}`}
             className={cn(
-              "group relative block p-6 rounded-xl transition-all duration-300",
+              "group relative block p-10 rounded-xl transition-all duration-300",
               "transform hover:-translate-y-1",
               "border border-gray-100",
               "shadow-[0_2px_8px_rgba(0,0,0,0.05)]",

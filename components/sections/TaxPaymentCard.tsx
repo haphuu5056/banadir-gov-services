@@ -1,24 +1,6 @@
 import Image from "next/image";
 
-interface ContentItem {
-  text: string;
-  isBold?: boolean;
-}
-
-interface Section {
-  title: string;
-  content: ContentItem[];
-  image?: {
-    src: string;
-    alt: string;
-  };
-}
-
-interface TaxPaymentProps {
-  section: Section;
-}
-
-const TaxPayment: React.FC<TaxPaymentProps> = ({ section }) => {
+const TaxPayment = ({ section }) => {
   return (
     <section>
       <h2 className="text-2xl text-[#3F479E] font-bold mb-4">{section.title}</h2>

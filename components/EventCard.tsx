@@ -3,6 +3,7 @@ import Image from "next/legacy/image";
 import Link from "next/link";
 
 interface EventCardProps {
+  id: number;
   image: string;
   date: string;
   title: string;
@@ -10,24 +11,18 @@ interface EventCardProps {
   href: string;
 }
 
-export function EventCard({
-  image,
-  date,
-  title,
-  location,
-  href,
-}: EventCardProps) {
+export function EventCard({ id, image, date, title, location, href }: EventCardProps) {
   return (
-    (<Link
-      href={href}
+    <Link
+      href={`${href}/${id}`}
       className="group block"
       aria-labelledby={`event-${title.toLowerCase().replace(/\s+/g, "-")}`}
     >
-      <article className=" overflow-hidden transition-transform duration-200 hover:scale-[1.02]">
-        <div className="relative  aspect-[16/10] w-full">
+      <article className="overflow-hidden transition-transform duration-200 hover:scale-[1.02]">
+        <div className="relative aspect-[16/10] w-full">
           <Image
             src={image || "/placeholder.svg"}
-            alt=""
+            alt={title}
             layout="fill"
             className="object-cover rounded-xl"
             sizes="(min-width: 1280px) 400px, (min-width: 768px) 33vw, 100vw"
@@ -53,10 +48,8 @@ export function EventCard({
           >
             {title}
           </h3>
-
-          {/* <p className="text-gray-600 line-clamp-2">{description}</p> */}
         </div>
       </article>
-    </Link>)
+    </Link>
   );
 }
