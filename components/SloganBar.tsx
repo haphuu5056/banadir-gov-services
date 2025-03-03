@@ -31,12 +31,12 @@ export function SloganBar() {
   }, []);
 
   return (
-    <section className="py-4 border-b">
+    <section className="py-4 border-b bg-[#F5F3FF]/70">
       <div className="container mx-auto px-4 py-5 md:py-4 sm:px-6 lg:px-12 flex flex-col-reverse md:flex-row justify-between items-start lg:items-center gap-6">
         {/* Left side - Announcement */}
         <div className="w-full md:w-2/3">
-          <div className="bg-white flex items-center space-x-4 p-3 ">
-            <div className="flex-shrink-0 w-10 h-10 bg-violet-50 rounded-full flex items-center justify-center">
+          <div className=" flex items-center space-x-4 p-3 ">
+            <div className="flex-shrink-0 w-10 h-10 bg-violet-100 rounded-full flex items-center justify-center">
               {React.createElement(announcements[currentAnnouncement].icon, {
                 className: "w-6 h-6 text-primary",
               })}
