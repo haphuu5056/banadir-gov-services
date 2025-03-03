@@ -1,5 +1,5 @@
 import { Input } from "@/components/ui/input";
-import { Search, User, } from "lucide-react";
+import {  Search, User, } from "lucide-react";
 import Image from "next/legacy/image";
 import logo from "@/public/logo.png";
 import Link from "next/link";
@@ -40,12 +40,19 @@ export function Header() {
           </button>
 
           {/* Sign-in Link (Hidden on Mobile) */}
-          <Link
+          {/* <Link
             href="/sign-in"
             className="hidden md:flex items-center gap-2 text-primary hover:underline"
           >
             <User className="h-4 w-4" />
-            <span className="text-lg">Sign in / register</span>
+            <span className="text-lg">Sign in </span>
+          </Link> */}
+          <Link
+            href="/sign-up"
+            className="hidden md:flex items-center gap-2 text-primary hover:underline  border-primary/10"
+          >
+            <User className="h-4 w-4" />
+            <span className="text-lg">Sign Up </span>
           </Link>
 
           {/* Mobile Menu Icon */}
