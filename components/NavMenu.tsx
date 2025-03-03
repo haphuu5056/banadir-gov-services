@@ -65,7 +65,7 @@ export function NavMenu() {
 
         {/* Sidebar Content */}
         <div className="h-[calc(100vh-73px)] overflow-y-auto px-4 py-6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 py-5 gap-6 px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 py-5 gap-6 px-4 md:px-8">
             {navigationData.map((section) => (
               <div key={section.title} className="space-y-3">
                 <h3 className="text-[#3F479E] text-xl font-bold">{section.title}</h3>

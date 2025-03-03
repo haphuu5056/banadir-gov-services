@@ -7,7 +7,7 @@ import { NavMenu } from "./NavMenu";
 
 export function Header() {
   return (
-    <header className="bg-secondary sticky top-0 z-50 py-0 sm:py-2 border-b">
+    <header className="bg-secondary sticky top-0 z-50 py-0 sm:py-4 border-b">
       <div className="container mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex-shrink-0">
@@ -27,7 +27,7 @@ export function Header() {
             <Input
               type="search"
               placeholder="Search information, advice and more..."
-              className="w-full pl-10 pr-4 py-2 rounded-lg border bg-white border-gray-200"
+              className="w-full pl-10 pr-4 py-6 rounded-lg border bg-white border-gray-200"
             />
           </div>
         </div>

@@ -68,6 +68,7 @@ export default function DepartmentPage({ params }: PageProps) {
           </a>
         ))}
       </div>
+      
     </div>
   )
 }

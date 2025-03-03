@@ -1,8 +1,11 @@
-import bgImg from '@/public/bg.png'
+import { Building, FileText, Users, ShieldAlert, Megaphone, Newspaper, Gavel } from "lucide-react";
+import bgImg from '@/public/bg.png';
+
 export const departments = [
   {
     title: "Xafiiska GGB ahna Duqa Magaalada",
     link: "xafiiska-ggb-ahna-duqa-magaalada",
+    icon: Building, // Represents an official/government office
     sublinks: [
       {
         title: "Xafiiska GGB Ahna Duqa Magaalada",
@@ -17,6 +20,7 @@ export const departments = [
   {
     title: "Waaxda Maamulka iyo Maaliyadda",
     link: "waaxda-maamulka-iyo-maaliyadda",
+    icon: FileText, // Represents finance and administration documents
     sublinks: [
       {
         title: "Daqliyada iyo Ganaaxyada",
@@ -37,6 +41,7 @@ export const departments = [
   {
     title: "Cabashooyinka",
     link: "cabashooyinka",
+    icon: Users, // Represents complaints or public grievances
     sublinks: [
       {
         title: "Cabashooyinka",
@@ -49,6 +54,7 @@ export const departments = [
   {
     title: "Xogheynta Guud",
     link: "xogheynta-guud",
+    icon: FileText, // Represents records and general documentation
     sublinks: [
       { title: "Keyda xogta", link: "/departments/xogheynta-guud/keyda-xogta" },
       {
@@ -62,6 +68,7 @@ export const departments = [
   {
     title: "Waaxda Arimaha Bulshada iyo Wacyigelinta",
     link: "waaxda-arimaha-bulshada-iyo-wacyigelinta",
+    icon: ShieldAlert, // Represents community and social services
     sublinks: [
       {
         title: "Dabdemiska iyo Gargaarka degdega",
@@ -86,6 +93,7 @@ export const departments = [
   {
     title: "Ogeysiis Dadweyne",
     link: "ogeysiis-dadweyne",
+    icon: Megaphone, // Represents public announcements
     sublinks: [
       {
         title: "Gudoomiyaha degmada Shangaani",
@@ -111,6 +119,7 @@ export const departments = [
   {
     title: "Waaxda Howlaha Guud",
     link: "waaxda-howlaha-guud",
+    icon: Gavel, // Represents infrastructure and general works
     sublinks: [
       {
         title: "Maamulka Dhulka",
@@ -136,6 +145,7 @@ export const departments = [
   {
     title: "Wararka",
     link: "wararka",
+    icon: Newspaper, // Represents news and media
     sublinks: [
       { title: "TV-ga", link: "/departments/wararka/tv-ga" },
       { title: "Idaacada", link: "/departments/wararka/idaacada" },

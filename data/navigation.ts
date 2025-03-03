@@ -18,7 +18,13 @@ import {  Building2,
   MapPin,
   Wrench,
   Zap,
-  Home, } from "lucide-react"
+  Home,
+  Tv2,
+  Newspaper,
+  Tv,
+  Car,
+  Volleyball,
+  Venus, } from "lucide-react"
 
 // export interface NavItem {
 //   id: string
@@ -362,10 +368,12 @@ export const navigationData: Department[] = [
       {
         id: "biyomareenada",
         title: "Biyomareenada iyo Jidadka",
+        icon: Droplet
       },
       {
         id: "gaadiidka",
         title: "Gaadiidka",
+        icon: Car
       },
     ],
   },
@@ -376,14 +384,17 @@ export const navigationData: Department[] = [
       {
         id: "dhalinyarada",
         title: "Dhalinyarada",
+        icon: Users
       },
       {
         id: "haweenka",
         title: "Haweenka",
+        icon: Venus
       },
       {
         id: "ciyaaraha",
         title: "Ciyaaraha",
+        icon: Volleyball
       },
     ],
   },
@@ -394,14 +405,17 @@ export const navigationData: Department[] = [
       {
         id: "tv-ga",
         title: "TV-ga",
+        icon: Tv2,
       },
       {
         id: "idaacada",
         title: "Idaacada",
+        icon: Newspaper,
       },
       {
         id: "wararka-kale",
         title: "Wararka kale",
+        icon: Tv,
       },
     ],
   },

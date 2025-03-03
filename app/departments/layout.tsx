@@ -19,104 +19,47 @@ export default function DepartmentLayout({ children }: DepartmentLayoutProps) {
           {/* Main Content */}
           <main className="flex-1 overflow-auto px-1 md:px-0">
             {children}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 px-2 md:px-12 py-3">
-              {/* Help Section */}
-              <div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 px-2 md:px-20 py-3">
+              {[
+              {
+                title: "Help with Payments",
+                links: [
+                "Difficulty paying your taxes",
+                "Apply for payment support",
+                "Extra help with your bill",
+                "Request a refund",
+                "Request a bill review",
+                ],
+              },
+              {
+                title: "More Information",
+                links: [
+                "Understanding your tax bill",
+                "How your tax is used",
+                "Tax regulations for businesses",
+                "Privacy policy",
+                "Current tax rates and bands",
+                ],
+              },
+              ].map((section, index) => (
+              <div key={index}>
                 <h2 className="text-2xl border-b font-semibold text-[#3F479E] mb-4 py-2">
-                  Help with Payments
+                {section.title}
                 </h2>
                 <ul className="space-y-3">
-                  <li>
-                    <Link
-                      href="#"
-                      className="text-[#3F479E] hover:text-[#6366F1] hover:underline text-xl"
-                    >
-                      Difficulty paying your taxes
-                    </Link>
+                {section.links.map((link, idx) => (
+                  <li key={idx}>
+                  <Link
+                    href="#"
+                    className="text-[#3F479E] hover:text-[#6366F1] hover:underline text-xl"
+                  >
+                    {link}
+                  </Link>
                   </li>
-                  <li>
-                    <Link
-                      href="#"
-                      className="text-[#3F479E] hover:text-[#6366F1] hover:underline text-xl"
-                    >
-                      Apply for payment support
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="#"
-                      className="text-[#3F479E] hover:text-[#6366F1] hover:underline text-xl"
-                    >
-                      Extra help with your bill
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="#"
-                      className="text-[#3F479E] hover:text-[#6366F1] hover:underline text-xl"
-                    >
-                      Request a refund
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="#"
-                      className="text-[#3F479E] hover:text-[#6366F1] hover:underline text-xl"
-                    >
-                      Request a bill review
-                    </Link>
-                  </li>
+                ))}
                 </ul>
               </div>
-
-              {/* Information Section */}
-              <div>
-                <h2 className="text-2xl font-semibold text-[#3F479E] mb-4 border-b py-2">
-                  More Information
-                </h2>
-                <ul className="space-y-3">
-                  <li>
-                    <Link
-                      href="#"
-                      className="text-[#3F479E] hover:text-[#6366F1] hover:underline text-xl"
-                    >
-                      Understanding your tax bill
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="#"
-                      className="text-[#3F479E] hover:text-[#6366F1] hover:underline text-xl"
-                    >
-                      How your tax is used
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="#"
-                      className="text-[#3F479E] hover:text-[#6366F1] hover:underline text-xl"
-                    >
-                      Tax regulations for businesses
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="#"
-                      className="text-[#3F479E] hover:text-[#6366F1] hover:underline text-xl"
-                    >
-                      Privacy policy
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="#"
-                      className="text-[#3F479E] hover:text-[#6366F1] hover:underline text-xl"
-                    >
-                      Current tax rates and bands
-                    </Link>
-                  </li>
-                </ul>
-              </div>
+              ))}
             </div>
           </main>
         </div>
