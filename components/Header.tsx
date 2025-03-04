@@ -8,7 +8,7 @@ import { NavMenu } from "./NavMenu";
 export function Header() {
   return (
     <header className="bg-secondary sticky top-0 z-50 py-0 sm:py-4 border-b">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-20 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex-shrink-0">
           <Image

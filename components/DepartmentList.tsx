@@ -16,7 +16,7 @@ export const homeDepartments = [
     cols: "lg:col-span-1 lg:row-span-4",
   },
   {
-    title: "Waaxda Arimaha Bulshada iyo wacyigelinta",
+    title: " Arimaha Bulshada iyo wacyigelinta",
     link: "/homedeparment/arimaha-bulshada",
     background: "bg-gradient-to-br from-[#3F479E] to-[#5758a9]",
     textColor: "text-white",
@@ -29,7 +29,7 @@ export const homeDepartments = [
     cols: "lg:col-span-1 lg:row-span-3 lg:row-start-5",
   },
   {
-    title: "Waaxda Maamulka Iyo Maaliyada",
+    title: " Maamulka Iyo Maaliyada",
     link: "/homedeparment/maamulka-maaliyada",
     background: "bg-gradient-to-br from-[#3F479E] to-[#5758a9]",
     textColor: "text-white",

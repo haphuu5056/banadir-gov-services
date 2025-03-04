@@ -4,8 +4,7 @@ import { Separator } from "@/components/ui/separator"
 const quickLinks = [
   { label: "News", href: "/news" },
   { label: "Downloads", href: "/downloads" },
-  { label: "Blogs", href: "/blogs" },
-  { label: "Events", href: "/events" },
+
 ]
 
 export function QuickLinksMenu() {

@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { AlignJustify, X } from "lucide-react";
 import { navigationData } from "@/data/navigation";
 import Link from "next/link";
 import { useState, useEffect } from "react";
@@ -27,14 +27,14 @@ export function NavMenu() {
   return (
     <>
       {/* Toggle Button */}
-      <Button
-        variant="ghost"
-        className="text-[#3F479E] hover:bg-[#3F479E] hover:text-white transition-colors"
+      <button
+        // variant="ghost"
+        className="text-[#3F479E] flex items-center transition-colors"
         onClick={() => setIsOpen(true)}
       >
-        <Menu className="h-10 w-10" />
-        <span className="ml-1 hidden md:inline text-lg">Adeegyada Golaha</span>
-      </Button>
+        <AlignJustify  size={20}/>
+        <span className="ml-2 hidden md:inline text-lg hover:underline">Maamulka Gobolka</span>
+      </button>
 
       {/* Backdrop */}
       {isOpen && (
@@ -68,12 +68,13 @@ export function NavMenu() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 py-5 gap-6 px-4 md:px-8">
             {navigationData.map((section) => (
               <div key={section.title} className="space-y-3">
-                <h3 className="text-[#3F479E] text-xl font-bold">{section.title}</h3>
+                <Link href={`/departments/${encodeURIComponent(section.id)}`} className="text-[#3F479E] text-xl font-bold"                         onClick={() => setIsOpen(false)}
+                >{section.title}</Link>
                 <ul className="space-y-1">
-                  {section.items?.map((item) => (
+                  {section.items?.slice(0, 6).map((item) => (
                     <li key={item.title}>
                       <Link
-                        href={`/departments/${encodeURIComponent(section.id)}`}
+                        href={`/departments/${encodeURIComponent(section.id)}/${encodeURIComponent(item.id)}`}
                         className="text-[#3F479E]/90 hover:text-[#3F479E] hover:underline block py-1 transition-colors text-lg"
                         onClick={() => setIsOpen(false)}
                       >

@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { Breadcrumb } from "@/components/Breadcrumb";
+// import { Breadcrumb } from "@/components/DepartmentBreadcrumb";
 import { homeDepartments } from "@/components/DepartmentList";
 
 const gradientClasses = [
@@ -31,9 +31,9 @@ export default function HomeDepartmentPage({ params }: PageProps) {
   return (
     <div className="px-2 md:px-10 py-3 mb-12">
       {/* Breadcrumb Navigation */}
-      <div className="mb-6">
+      {/* <div className="mb-6">
         <Breadcrumb items={[{ label: department.title }]} />
-      </div>
+      </div> */}
 
       {/* Department Title */}
       <div className="mb-8">
