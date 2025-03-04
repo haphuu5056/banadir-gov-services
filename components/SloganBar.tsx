@@ -31,7 +31,7 @@ export function SloganBar() {
   }, []);
 
   return (
-    <section className="py-4 border-b bg-[#F5F3FF]/70">
+    <section className="py-4 border-b bg-[#F5F3FF]">
       <div className="container mx-auto px-4 py-5 md:py-4 sm:px-6 lg:px-12 flex flex-col-reverse md:flex-row justify-between items-start lg:items-center gap-6">
         {/* Left side - Announcement */}
         <div className="w-full md:w-2/3">

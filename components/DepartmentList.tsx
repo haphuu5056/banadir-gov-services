@@ -17,7 +17,7 @@ export const homeDepartments = [
   },
   {
     title: "Waaxda Arimaha Bulshada iyo wacyigelinta",
-    link: "/homedeparment/arimaha-bulshada",
+    link: "/departments/arimaha-bulshada",
     background: "bg-gradient-to-br from-[#3F479E] to-[#5758a9]",
     textColor: "text-white",
     subLinks: [
@@ -42,7 +42,7 @@ export const homeDepartments = [
   },
   {
     title: "Wararka",
-    link: "/homedeparment/wararka",
+    link: "/departments/wararka",
     background: "bg-gradient-to-br from-[#FFF1F1] to-[#FFE4E4]",
     textColor: "text-primary",
     subLinks: [
@@ -81,7 +81,7 @@ export const homeDepartments = [
       { name: "Keyda xogta", link: "/homedeparment/xogheynta-guud/keyda-xogta" },
       { name: "Qorsheynta iyo kormeerka", link: "/homedeparment/xogheynta-guud/qorsheynta-kormeerka" },
     ],
-    cols: "lg:col-span-1 lg:row-span-2 lg:col-start-3 lg:row-start-3",
+    cols: "lg:col-span-1 lg:row-span-2 lg:col-start-4 lg:row-start-3",
   },
   {
     title: "Waaxda Howlaha guud",
@@ -133,6 +133,7 @@ const DepartmentList = () => {
         </div>
       ))}
     </div>
+
   );
 };
 
