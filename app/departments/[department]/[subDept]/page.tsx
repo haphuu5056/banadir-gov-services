@@ -79,7 +79,6 @@ export default function SubdepartmentPage({ params }: PageProps) {
   const subdepartment = department?.items?.find(
     (subDept) => subDept.id === decodeURIComponent(params.subDept)
   );
-  console.log(params);
 
   if (!department || !subdepartment) {
     notFound();
@@ -144,76 +143,14 @@ export default function SubdepartmentPage({ params }: PageProps) {
   // Default layout for other subdepartments
   return (
     <div className="px-2 md:px-10  ">
-      <div className="">
-        <h1 className="text-3xl mb-4 font-bold text-primary">
+      <div className="mb-10">
+        <h1 className="text-3xl mb-1 font-bold text-primary">
           {subdepartment.title}
         </h1>
-        <div className="space-y-5">
-        <p className="text-gray-700 leading-relaxed">
-          Waaxda Maamulka iyo Maaliyadda ee Maamulka Gobolka Banaadir waa
-          xudunta nidaamka maaraynta iyo dhaqaalaha ee gobolka. Waaxdan waxay ka
-          shaqeysaa dejinta, hirgelinta, iyo kormeerka siyaasadaha iyo
-          hab-raacyada lagu maareeyo maamulka iyo maaliyadda gobolka, iyada oo
-          xooga saareysa hufnaanta, isla xisaabtanka, iyo daah-furnaanta.
-        </p>
-        <h2 className="text-2xl font-semibold text-primary">Hadafka Waaxda</h2>
-        <p className="text-gray-700 leading-relaxed">
-          Hadafka ugu weyn ee Waaxda Maamulka iyo Maaliyadda waa in la hubiyo in
-          kheyraadka maaliyadeed ee Gobolka Banaadir si hufan, mas’uuliyad leh,
-          iyo waafaqsan xeerarka dowladda loo adeegsado, looguna adeegayo
-          bulshada gobolka.
-        </p>
-        <h2 className="text-2xl font-semibold text-primary">
-          Waajibaadka iyo Shaqooyinka Waaxda
-        </h2>
-        <ul className="list-disc list-inside space-y-2 text-gray-700">
-          <li>Diyaarinta miisaaniyadda sanadlaha ah ee Gobolka Banaadir.</li>
-          <li>La socodka iyo xakamaynta kharashaadka iyo dakhliga maamulka.</li>
-          <li>
-            Hubinta in dhammaan waaxyaha kala duwan ay u hoggaansamaan shuruucda
-            maaliyadeed iyo xeerarka dowladda.
-          </li>
-          <li>
-            Hirgelinta nidaamyo casri ah oo lagu maareeyo xisaabaadka iyo
-            warbixinaha maaliyadeed.
-          </li>
-          <li>
-            Xoojinta isla xisaabtanka gudaha ee hay’adaha kala duwan ee Gobolka
-            Banaadir.
-          </li>
-          <li>
-            Ka qayb qaadashada horumarinta hababka maaraynta shaqaalaha iyo
-            kheyraadka aadanaha.
-          </li>
-          <li>
-            Kormeerka iyo xaqiijinta in adeegyada bulshada loo maareeyo si
-            waafaqsan miisaaniyadda la ansixiyay.
-          </li>
-        </ul>
-        <h2 className="text-2xl font-semibold text-primary">
-          Muhiimadda Waaxda
-        </h2>
-        <p className="text-gray-700 leading-relaxed">
-          Waaxda Maamulka iyo Maaliyadda waa laf-dhabarta hubisa in maamulka
-          Gobolka Banaadir uu ku shaqeeyo nidaam maamul-wanaag leh, isla
-          markaana la hubiyo in dhammaan kheyraadka iyo hantida dowladdu si
-          waafaqsan sharciga loo maamulo. Waa waaxda mas’uulka ka ah dhismaha
-          nidaam daah-furan oo bulshada la wadaagto warbixinaha ku saabsan
-          isticmaalka hantida guud.
-        </p>
-        <h2 className="text-2xl font-semibold text-primary">
-          La Xiriir Waaxda
-        </h2>
-        <p className="text-gray-700 leading-relaxed">
-          Haddii aad u baahato warbixin dheeraad ah ama aad qabto su’aalo ku
-          saabsan adeegyada Waaxda Maamulka iyo Maaliyadda, fadlan la xiriir
-          xafiiska gobolka ama booqo xarunta Aqalka Dowladda Hoose ee
-          Xamarweyne, Muqdisho.
-        </p>{" "}
-        </div>
+        <p>{subdepartment.description}</p>
       </div>
 
-      {subdepartment.services && (
+      {subdepartment.services ? (
         <div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {subdepartment.services.map((service, index) => (
@@ -259,7 +196,69 @@ export default function SubdepartmentPage({ params }: PageProps) {
             ))}
           </div>
         </div>
-      )}
+      ) : <div className="space-y-5">
+      <p className="text-gray-700 leading-relaxed">
+        Waaxda Maamulka iyo Maaliyadda ee Maamulka Gobolka Banaadir waa
+        xudunta nidaamka maaraynta iyo dhaqaalaha ee gobolka. Waaxdan waxay ka
+        shaqeysaa dejinta, hirgelinta, iyo kormeerka siyaasadaha iyo
+        hab-raacyada lagu maareeyo maamulka iyo maaliyadda gobolka, iyada oo
+        xooga saareysa hufnaanta, isla xisaabtanka, iyo daah-furnaanta.
+      </p>
+      <h2 className="text-2xl font-semibold text-primary">Hadafka Waaxda</h2>
+      <p className="text-gray-700 leading-relaxed">
+        Hadafka ugu weyn ee Waaxda Maamulka iyo Maaliyadda waa in la hubiyo in
+        kheyraadka maaliyadeed ee Gobolka Banaadir si hufan, mas’uuliyad leh,
+        iyo waafaqsan xeerarka dowladda loo adeegsado, looguna adeegayo
+        bulshada gobolka.
+      </p>
+      <h2 className="text-2xl font-semibold text-primary">
+        Waajibaadka iyo Shaqooyinka Waaxda
+      </h2>
+      <ul className="list-disc list-inside space-y-2 text-gray-700">
+        <li>Diyaarinta miisaaniyadda sanadlaha ah ee Gobolka Banaadir.</li>
+        <li>La socodka iyo xakamaynta kharashaadka iyo dakhliga maamulka.</li>
+        <li>
+          Hubinta in dhammaan waaxyaha kala duwan ay u hoggaansamaan shuruucda
+          maaliyadeed iyo xeerarka dowladda.
+        </li>
+        <li>
+          Hirgelinta nidaamyo casri ah oo lagu maareeyo xisaabaadka iyo
+          warbixinaha maaliyadeed.
+        </li>
+        <li>
+          Xoojinta isla xisaabtanka gudaha ee hay’adaha kala duwan ee Gobolka
+          Banaadir.
+        </li>
+        <li>
+          Ka qayb qaadashada horumarinta hababka maaraynta shaqaalaha iyo
+          kheyraadka aadanaha.
+        </li>
+        <li>
+          Kormeerka iyo xaqiijinta in adeegyada bulshada loo maareeyo si
+          waafaqsan miisaaniyadda la ansixiyay.
+        </li>
+      </ul>
+      <h2 className="text-2xl font-semibold text-primary">
+        Muhiimadda Waaxda
+      </h2>
+      <p className="text-gray-700 leading-relaxed">
+        Waaxda Maamulka iyo Maaliyadda waa laf-dhabarta hubisa in maamulka
+        Gobolka Banaadir uu ku shaqeeyo nidaam maamul-wanaag leh, isla
+        markaana la hubiyo in dhammaan kheyraadka iyo hantida dowladdu si
+        waafaqsan sharciga loo maamulo. Waa waaxda mas’uulka ka ah dhismaha
+        nidaam daah-furan oo bulshada la wadaagto warbixinaha ku saabsan
+        isticmaalka hantida guud.
+      </p>
+      <h2 className="text-2xl font-semibold text-primary">
+        La Xiriir Waaxda
+      </h2>
+      <p className="text-gray-700 leading-relaxed">
+        Haddii aad u baahato warbixin dheeraad ah ama aad qabto su’aalo ku
+        saabsan adeegyada Waaxda Maamulka iyo Maaliyadda, fadlan la xiriir
+        xafiiska gobolka ama booqo xarunta Aqalka Dowladda Hoose ee
+        Xamarweyne, Muqdisho.
+      </p>{" "}
+      </div>}
     </div>
   );
 }

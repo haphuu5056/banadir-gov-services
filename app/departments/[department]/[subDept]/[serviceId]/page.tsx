@@ -153,9 +153,9 @@ export default function ServicePage({ params }: PageProps) {
       return (
         <div className="flex flex-row lg:flex-col gap-8 max-w-4xl mx-auto px-6">
           {/* Navigation Section */}
-          <Card className=" border rounded shadow-none bg-gray-50 mb-6">
+          <Card className=" border rounded shadow-none bg-gray-50 mb-6 max-w-3xl">
             <CardHeader>
-              <CardTitle className="text-2xl font-semibold text-gray-900">Qeybtaan Gudaheeda</CardTitle>
+              <CardTitle className="text-2xl font-sans font-semibold text-gray-900 border-b pb-4">Qeybtaan Gudaheeda</CardTitle>
             </CardHeader>
             <CardContent>
               <nav className="grid grid-cols-1 lg:grid-cols-2 gap-2">
@@ -163,14 +163,14 @@ export default function ServicePage({ params }: PageProps) {
                   <button
                     key={section.id}
                     onClick={() => setActiveSection(section.id)}
-                    className={`flex items-center gap-2  p-2 rounded-md transition-colors text-left ${
-                      activeSection === section.id ? " text-gray-900" : "hover:underline text-[#3F479E] "
-                    } font-medium`}
+                    className={`flex items-center   p-2 rounded-md transition-colors text-left ${
+                      activeSection === section.id ? " text-gray-900" : " text-primary "
+                    } `}
                   >
-                    <span className="flex items-center justify-center w-6 h-6 rounded-full bg-white text-[#3F479E] text-sm">
+                    <span className={`flex items-center justify-center w-8 h-8 rounded-full text-primary text-lg ${activeSection === section.id ? "bg-black text-white" : "bg-gray-200 "}`}>
                       {section.id}
                     </span>
-                    <span className="text-lg">{section.title}</span>
+                    <span className={`text-xl ml-2 ${activeSection === section.id ? "" : "hover:underline"}`}>{section.title}</span>
                   </button>
                 ))}
               </nav>
@@ -178,7 +178,7 @@ export default function ServicePage({ params }: PageProps) {
           </Card>
   
           {/* Content Section */}
-          <div className="lg:w-2/3">
+          <div className="lg:max-w-3xl w-full">
             <ActiveComponent />
           </div>
         </div>

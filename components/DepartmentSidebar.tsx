@@ -6,14 +6,11 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useState } from "react";
 
-const Sidebar = () => {
+const DepartmentSidebar = () => {
   const { department } = useParams<{ department: string; subdept: string }>();
   const currentDep = navigationData.filter((dep) => dep.id === department);
   const [openDepartment, setOpenDepartment] = useState<boolean>(false);
 
-  // const toggleSidebar = () => {
-  //   setIsSidebarOpen((prev) => !prev);
-  // };
 
   const toggleDepartment = () => {
     setOpenDepartment((prev) => !prev);
@@ -60,4 +57,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default DepartmentSidebar;

@@ -311,7 +311,6 @@ export const navigationData: Department[] = [
       },
     ],
   },
-  { id: "council", title: "Your Council" },
   {
     id: "ururada",
     title: "Ururadda",
@@ -349,4 +348,7 @@ export const navigationData: Department[] = [
       },
     ],
   },
+  { id: "council", title: "Your Council" },
+  { id: "cabashooyinka", title: "Cabashooyinka" },
+
 ];
