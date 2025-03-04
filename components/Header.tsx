@@ -114,13 +114,13 @@ export function Header() {
           </button>
 
           {/* Sign-in Link */}
-          <div className="flex items-center gap-1">
+          <div className="hidden md:flex items-center gap-1">
             <User size={25} className="text-primary" />
-            <Link href="/sign-in" className="hidden md:flex text-primary hover:underline">
+            <Link href="/sign-in" className="flex text-primary hover:underline">
               <span className="text-lg">Sign in</span>
             </Link>
             /
-            <Link href="/sign-up" className="hidden md:flex text-primary hover:underline">
+            <Link href="/sign-up" className="flex text-primary hover:underline">
               <span className="text-lg">Sign Up</span>
             </Link>
           </div>

@@ -3,7 +3,7 @@ import Image from "next/legacy/image";
 import bgImg from "@/public/bg.png";
 
 // Define the department data
-import { Building, Users, Banknote, Newspaper, Megaphone, AlertTriangle, Wrench, MapPin } from "lucide-react";
+import { Building, Users, Banknote, Newspaper, Megaphone, AlertTriangle, Wrench } from "lucide-react";
 
 export const homeDepartments = [
   {
