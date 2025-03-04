@@ -19,8 +19,8 @@ export const homeDepartments = [
     cols: "lg:col-span-1 lg:row-span-4",
   },
   {
-    title: "Waaxda Arimaha Bulshada iyo wacyigelinta",
-    link: "/homedeparment/arimaha-bulshada",
+    title: "Arimaha Bulshada iyo wacyigelinta",
+    link: "/departments/arimaha-bulshada",
     background: "bg-gradient-to-br from-[#3F479E] to-[#5758a9]",
     textColor: "text-white",
     icon: <Users size={35} />, 
@@ -81,7 +81,7 @@ export const homeDepartments = [
     cols: "lg:col-span-1 lg:row-span-4 lg:col-start-3 lg:row-start-3 h-fit",
   },
   {
-    title: "Waaxda Howlaha guud",
+    title: "Howlaha guud",
     link: "/homedeparment/howlaha-guud",
     background: "bg-gradient-to-br from-[#FFF1F1] to-[#FFE4E4]",
     textColor: "text-primary",
