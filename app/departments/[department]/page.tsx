@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
 import { navigationData } from "@/data/navigation";
 import { cn } from "@/lib/utils";
+import { YourCouncil } from "@/components/YourCouncil";
+import { Cabashooyinka } from "@/components/Cabashooyinka";
 
 const gradientClasses = [
   "bg-gradient-to-br from-[#C5C8FF] to-[#D8DAFF] hover:from-[#B0B4FF] hover:to-[#C5C8FF] text-[#3F479E]",
@@ -35,9 +37,10 @@ export default function DepartmentPage({ params }: PageProps) {
           {department.title}
         </h1>
       </div>
-
+      {params.department === 'council' && <YourCouncil />}
+      {params.department === 'cabashooyinka' && <Cabashooyinka />}
       <div className="grid grid-cols-1 md:grid-cols-2  gap-6">
-        {department.items?.map((subDept, index) => (
+        {department.items?.slice(0,6).map((subDept, index) => (
           <a
             key={subDept.id}
             href={`/departments/${encodeURIComponent(

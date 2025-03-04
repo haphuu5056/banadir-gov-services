@@ -34,11 +34,9 @@ const subdepartmentInfo: Record<string, string[]> = {
   shaqada: [
     "Job Openings",
     "Employee Benefits",
-    "Training Programs",
     "HR Policies",
   ],
   daqliyada: [
-    "Tax Calculator",
     "Payment Deadlines",
     "Revenue Reports",
     "Fine Appeals",
@@ -47,23 +45,19 @@ const subdepartmentInfo: Record<string, string[]> = {
     "Budget Reports",
     "Financial Statements",
     "Audit Information",
-    "Procurement Policies",
   ],
   canshuuraha: [
     "Tax Rates",
     "Filing Deadlines",
-    "Tax Exemptions",
     "Business Tax Guide",
   ],
   qasnadda: [
     "Investment Opportunities",
     "Debt Management",
     "Financial Forecasts",
-    "Treasury Reports",
   ],
   adeegyada: [
     "Service Catalog",
-    "Service Level Agreements",
     "Customer Feedback",
     "Service Improvements",
   ],
@@ -87,14 +81,14 @@ export function RelatedInfoMenu({ department, subDept }: RelatedInfoMenuProps) {
         <nav className="flex flex-col space-y-2">
           <Link
             href="#"
-            className=" text-gray-600 hover:text-[#3F479E] hover:underline"
+            className=" text-gray-600 text-lg hover:text-[#3F479E] hover:underline"
           >
             News
           </Link>
 
           <Link
             href="#"
-            className=" text-gray-600 hover:text-[#3F479E] hover:underline"
+            className=" text-gray-600 text-lg hover:text-[#3F479E] hover:underline"
           >
             Downloads
           </Link>
@@ -102,7 +96,7 @@ export function RelatedInfoMenu({ department, subDept }: RelatedInfoMenuProps) {
             <Link
               key={index}
               href="#"
-              className=" text-gray-600 hover:text-[#3F479E] hover:underline"
+              className=" text-gray-600 text-lg hover:text-[#3F479E] hover:underline"
             >
               {link}
             </Link>

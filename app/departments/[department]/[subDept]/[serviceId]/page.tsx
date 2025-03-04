@@ -151,7 +151,7 @@ export default function ServicePage({ params }: PageProps) {
       const ActiveComponent = sections.find((section) => section.id === activeSection)?.component || SidaLooBixiyo
   
       return (
-        <div className="flex flex-row lg:flex-col gap-8 max-w-4xl mx-auto px-6">
+        <div className="lg:flex  lg:flex-col gap-8 max-w-4xl mx-auto px-6">
           {/* Navigation Section */}
           <Card className=" border rounded shadow-none bg-gray-50 mb-6 max-w-3xl">
             <CardHeader>

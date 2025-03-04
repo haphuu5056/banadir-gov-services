@@ -25,13 +25,13 @@ const DepartmentSidebar = () => {
               <div className="flex justify-between items-center gap-4 py-1 rounded-md border-b">
                 <Link
                   href={`/departments/${department.id}/`}
-                  className=" text-[#3F479E] max-w-lg text-xl font-medium py-3 "
+                  className=" text-primary max-w-lg text-xl font-medium py-3 "
                 >
                   {department.title}
                 </Link>
                 <ChevronDown
                   size={25}
-                  className={`text-[#3F479E] transition-transform duration-300 cursor-pointer ${
+                  className={`text-primary transition-transform duration-300 cursor-pointer ${
                     openDepartment ? "rotate-180" : "rotate-0"
                   }`}
                   onClick={toggleDepartment}
@@ -43,7 +43,7 @@ const DepartmentSidebar = () => {
                     <Link
                       href={`/departments/${department.id}/${item.id}`}
                       key={item.title}
-                      className="text-[#13174b] text-lg hover:bg-[#13174b]/20 hover:rounded-lg p-2"
+                      className="text-[#13174b] text-lg hover:text-primary hover:underline p-2"
                     >
                       {item.title}
                     </Link>

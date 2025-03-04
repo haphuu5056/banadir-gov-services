@@ -68,10 +68,7 @@ export const navigationData: Department[] = [
         title: "Warfaafinta",
       },
     ],
-    quickLinks: [
-      { label: "Warbixinta Amniga", href: "#" },
-      { label: "Xeerarka Dowlada", href: "#" },
-    ],
+
   },
   {
     id: "wararka",
@@ -268,11 +265,7 @@ export const navigationData: Department[] = [
         icon: CalculatorIcon,
       },
     ],
-    quickLinks: [
-      { label: "Shaqooyin Bannaan", href: "#" },
-      { label: "Xogta Mushaharka", href: "#" },
-      { label: "Tababarada Shaqaalaha", href: "#" },
-    ],
+
   },
 
   {
@@ -348,7 +341,10 @@ export const navigationData: Department[] = [
       },
     ],
   },
-  { id: "council", title: "Your Council" },
+  { id: "council", title: "Your Council", items: [
+    { id: "About_our_website", title: "About our website" },
+    {id: "accessible" , title: "Accessibility"}
+  ] },
   { id: "cabashooyinka", title: "Cabashooyinka" },
 
 ];
