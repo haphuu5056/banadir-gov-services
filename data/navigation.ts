@@ -1,5 +1,6 @@
-import type { Department } from "@/types/departments"
-import {  Building2,
+import type { Department } from "@/types/departments";
+import {
+  Building2,
   Phone,
   Users,
   Flame,
@@ -10,172 +11,28 @@ import {  Building2,
   BriefcaseBusiness,
   Receipt,
   Wallet,
-  Calculator,
-  PiggyBank,
   ShoppingCart,
   FileText,
   ClipboardList,
   MapPin,
   Wrench,
   Zap,
-  Home, } from "lucide-react"
+  Home,
+  Tv2,
+  Newspaper,
+  Tv,
+  Car,
+  Volleyball,
+  Venus,
+  ShoppingBag,
+  CalculatorIcon,
+  PiggyBankIcon,
+  EqualSquareIcon,
+  BadgeDollarSign,
+  UserPlus,
+  DollarSign,
+} from "lucide-react";
 
-// export interface NavItem {
-//   id: string
-//   title: string
-// }
-
-// export interface NavSection {
-//   id: string
-//   title: string
-//   items: NavItem[]
-// }
-
-// export const navigationData: Department[] = [
-//   {
-//     id: "xafiiska-ggb",
-//     title: "Xafiiska GGB ahna Duqa Magaaladda",
-//     items: [
-//       {
-//         id: "guddoomiyaha",
-//         title: "Xafiiska Guddoomiyaha Gobolka Ahna Duqa Magaalada",
-//       },
-//       {
-//         id: "isgaarsiinta",
-//         title: "Isgaarsiinta iyo Tiknolojiyada",
-//       },
-//     ],
-//   },
-//   {
-//     id: "arimaha-bulshada",
-//     title: "Waaxda Arimaha Bulshada iyo wacyigelinta",
-//     items: [
-//       {
-//         id: "waxbarashada",
-//         title: "Waxbarshada",
-//       },
-//       {
-//         id: "dabdemiska",
-//         title: "Dabdemiska iyo Gargaarka degdega",
-//       },
-//       {
-//         id: "caafimaadka",
-//         title: "Caafimaadka",
-//       },
-//       {
-//         id: "nadaafadda",
-//         title: "Nadaafadda iyo biilic soocelinta",
-//       },
-//       {
-//         id: "diinta",
-//         title: "Diinta iyo Awqaafta",
-//       },
-//       {
-//         id: "biyaha",
-//         title: "Biyaha iyo Degaanka",
-//       },
-//       {
-//         id: "kaluumaysiga",
-//         title: "Kaluumaysiga",
-//       },
-//     ],
-//   },
-//   {
-//     id: "maamulka-maaliyadda",
-//     title: "Waaxda Maamulka iyo Maaliyadda",
-//     items: [
-//       {
-//         id: "shaqada",
-//         title: "Shaqadda iyo Shaqaalaha",
-//       },
-//       {
-//         id: "daqliyadda",
-//         title: "Daqliyadda iyo Ganaaxyadda",
-//       },
-//       {
-//         id: "maamulka-maaliyadda",
-//         title: "Maamulka maaliyadda",
-//       },
-//       {
-//         id: "canshuuraha",
-//         title: "Canshuuraha",
-//       },
-//       {
-//         id: "qasnadda",
-//         title: "Qasnadda",
-//       },
-//       {
-//         id: "adeegyada",
-//         title: "Adeeguada",
-//       },
-//     ],
-//   },
-//   {
-//     id: "amniga-siyaasadda",
-//     title: "Waaxda Amniga iyo Siyaasadda",
-//     items: [
-//       {
-//         id: "amniga",
-//         title: "Amniga iyo deriseynta",
-//       },
-//       {
-//         id: "isgaarsiinta-amniga",
-//         title: "Isgaarsiinta iyo Tiknolojiyada",
-//       },
-//       {
-//         id: "siyaasada",
-//         title: "Siyaasada iyo Dimoqraadiyada",
-//       },
-//       {
-//         id: "warfaafinta",
-//         title: "Warfaafinta",
-//       },
-//       {
-//         id: "idaacada",
-//         title: "Idaacada",
-//       },
-//     ],
-//   },
-  
-//   {
-//     id: "howlaha-guud",
-//     title: "Waaxda Howlaha guud",
-//     items: [
-//       {
-//         id: "maamulka-dhulka",
-//         title: "Maamulka Dhulka",
-//       },
-//       {
-//         id: "biyomareenada",
-//         title: "Biyomareenada iyo Jidadka",
-//       },
-//       {
-//         id: "korontada",
-//         title: "Korontada iyo Solarka",
-//       },
-//       {
-//         id: "farsamada",
-//         title: "Farsamada",
-//       },
-//     ],
-//   },
-//   {
-//     id: "ururada",
-//     title: "Ururadda",
-//     items: [
-//       {
-//         id: "dhalinyarada",
-//         title: "Dhalinyarada",
-//       },
-//       {
-//         id: "haweenka",
-//         title: "Haweenka",
-//       },
-//     ],
-//   },
-// ]
-
-// updated {all deparments}
 export const navigationData: Department[] = [
   {
     id: "xafiiska-ggb",
@@ -193,9 +50,54 @@ export const navigationData: Department[] = [
       },
     ],
   },
+
+  {
+    id: "amniga-siyaasada",
+    title: " Amniga iyo Siyaasada",
+    items: [
+      {
+        id: "amniga",
+        title: "Amniga iyo deriseynta",
+      },
+      {
+        id: "siyaasada",
+        title: "Siyaasada iyo Dimoqraadiyada",
+      },
+      {
+        id: "warfaafinta",
+        title: "Warfaafinta",
+      },
+    ],
+    quickLinks: [
+      { label: "Warbixinta Amniga", href: "#" },
+      { label: "Xeerarka Dowlada", href: "#" },
+    ],
+  },
+  {
+    id: "wararka",
+    title: "Wararka",
+    items: [
+      {
+        id: "tv-ga",
+        title: "TV-ga",
+        icon: Tv2,
+      },
+      {
+        id: "idaacada",
+        title: "Idaacada",
+        icon: Newspaper,
+      },
+      {
+        id: "wararka-kale",
+        title: "Wararka kale",
+        icon: Tv,
+      },
+    ],
+  },
+
   {
     id: "arimaha-bulshada",
-    title: "Waaxda Arimaha Bulshada iyo wacyigelinta",
+    title: "Arimaha Bulshada iyo Wacyigelinta",
     items: [
       {
         id: "waxbarashada",
@@ -259,12 +161,70 @@ export const navigationData: Department[] = [
   },
   {
     id: "maamulka-maaliyada",
-    title: "Waaxda Maamulka iyo Maaliyadda",
+    title: " Maamulka iyo Maaliyadda",
     items: [
       {
         id: "shaqada",
         title: "Shaqadda iyo Shaqaalaha",
+        description: "Waaxda Shaqaalaha iyo Shaqooyinka",
+
         icon: BriefcaseBusiness,
+        services: [
+          {
+            id: "shaqo-codsiga",
+            title: "Shaqo Codsiga",
+            icon: UserPlus,
+            description:
+              "Apply for job positions within the Banadir Regional Administration.",
+            howToApply:
+              "Submit your application online through our official portal or in person at our HR office located in the Banadir Regional Administration headquarters.",
+            requirements: [
+              "Completed application form",
+              "Updated CV/Resume",
+              "Copies of educational certificates and transcripts",
+              "Valid government-issued ID card",
+              "Two passport-sized photographs",
+              "Any relevant work experience certificates",
+            ],
+            processingTime:
+              "2-4 weeks, depending on the position and number of applicants",
+            fees: "No fee for application submission",
+          },
+          {
+            id: "mushaharka-baarista",
+            title: "Mushaharka Baarista",
+            icon: DollarSign,
+            description:
+              "Access and review your salary information and payment history.",
+            howToApply:
+              "Log in to the secure employee portal using your employee credentials or visit the HR office in person with proper identification.",
+            requirements: [
+              "Valid employee ID number",
+              "Government-issued photo ID for in-person requests",
+              "Personal login credentials for online access",
+            ],
+            processingTime:
+              "Immediate for online checks, 1-2 business days for in-person requests",
+            fees: "No fee for this service",
+          },
+          {
+            id: "tababarka-shaqaalaha",
+            title: "Tababarka Shaqaalaha",
+            icon: Users,
+            description:
+              "Access professional development and training programs for employees.",
+            howToApply:
+              "Submit a training request through your department head or via the employee portal.",
+            requirements: [
+              "Must be a current employee of the Banadir Regional Administration",
+              "Approval from immediate supervisor or department head",
+              "Completed training request form",
+            ],
+            processingTime:
+              "5-10 business days for request processing and approval",
+            fees: "Varies depending on the training program; many internal programs are provided at no cost to employees",
+          },
+        ],
       },
       {
         id: "daqliyada",
@@ -279,65 +239,45 @@ export const navigationData: Department[] = [
       {
         id: "canshuuraha",
         title: "Canshuuraha",
-        icon: Calculator,
+        icon: BadgeDollarSign,
+        description: "Bixi canshuurahaada Maamulka Gobolka Banaadir.",
       },
       {
-        id: "bangiyada",
-        title: "Bangiyada",
-        icon: PiggyBank,
+        id: "miisaaniyada",
+        title: "Miisaaniyada",
+        icon: EqualSquareIcon,
       },
       {
         id: "adeegyada",
         title: "Adeegyada",
         icon: ShoppingCart,
       },
-    ],
-  },
-  {
-    id: "amniga-siyaasada",
-    title: "Waaxda Amniga iyo Siyaasada",
-    items: [
       {
-        id: "amniga",
-        title: "Amniga iyo deriseynta",
+        id: "qasnada",
+        title: "Qasnada",
+        icon: PiggyBankIcon,
       },
       {
-        id: "isgaarsiinta-amniga",
-        title: "Isgaarsiinta iyo Tiknolojiyada",
+        id: "iibka",
+        title: "Iibka ",
+        icon: ShoppingBag,
       },
       {
-        id: "siyaasada",
-        title: "Siyaasada iyo Dimoqraadiyada",
-      },
-      {
-        id: "warfaafinta",
-        title: "Warfaafinta",
-      },
-      {
-        id: "idaacada",
-        title: "Idaacada",
+        id: "xisaabiyaha-guud",
+        title: "Xisaabiyaha Guud",
+        icon: CalculatorIcon,
       },
     ],
-  },
-  {
-    id: "xogheynta-guud",
-    title: "Xogheynta Guud",
-    items: [
-      {
-        id: "keydka-xogta",
-        title: "Keyda xogta",
-        icon: FileText,
-      },
-      {
-        id: "qorsheynta",
-        title: "Qorsheynta iyo kormeerka",
-        icon: ClipboardList,
-      },
+    quickLinks: [
+      { label: "Shaqooyin Bannaan", href: "#" },
+      { label: "Xogta Mushaharka", href: "#" },
+      { label: "Tababarada Shaqaalaha", href: "#" },
     ],
   },
+
   {
     id: "howlaha-guud",
-    title: "Waaxda Howlaha guud",
+    title: " Howlaha Guud",
     items: [
       {
         id: "maamulka-dhulka",
@@ -362,13 +302,16 @@ export const navigationData: Department[] = [
       {
         id: "biyomareenada",
         title: "Biyomareenada iyo Jidadka",
+        icon: Droplet,
       },
       {
         id: "gaadiidka",
         title: "Gaadiidka",
+        icon: Car,
       },
     ],
   },
+  { id: "council", title: "Your Council" },
   {
     id: "ururada",
     title: "Ururadda",
@@ -376,35 +319,34 @@ export const navigationData: Department[] = [
       {
         id: "dhalinyarada",
         title: "Dhalinyarada",
+        icon: Users,
       },
       {
         id: "haweenka",
         title: "Haweenka",
+        icon: Venus,
       },
       {
         id: "ciyaaraha",
         title: "Ciyaaraha",
+        icon: Volleyball,
       },
     ],
   },
   {
-    id: "wararka",
-    title: "Wararka",
+    id: "xogheynta-guud",
+    title: "Xogheynta Guud",
     items: [
       {
-        id: "tv-ga",
-        title: "TV-ga",
+        id: "keydka-xogta",
+        title: "Keyda xogta",
+        icon: FileText,
       },
       {
-        id: "idaacada",
-        title: "Idaacada",
-      },
-      {
-        id: "wararka-kale",
-        title: "Wararka kale",
+        id: "qorsheynta",
+        title: "Qorsheynta iyo kormeerka",
+        icon: ClipboardList,
       },
     ],
   },
 ];
-
-

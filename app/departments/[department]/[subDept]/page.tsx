@@ -1,9 +1,24 @@
 import { notFound } from "next/navigation";
 import { navigationData } from "@/data/navigation";
-import Canshuurta from "@/components/sections/Canshuurta";
-import { Breadcrumb } from "@/components/Breadcrumb";
+import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  CreditCard,
+  FileText,
+  Calculator,
+  Percent,
+  Receipt,
+  Building2,
+} from "lucide-react";
 
+const gradientClasses = [
+  "bg-gradient-to-br from-[#C5C8FF] to-[#D8DAFF] hover:from-[#B0B4FF] hover:to-[#C5C8FF] text-[#3F479E]",
+  "bg-gradient-to-br from-[#C5D8F0] to-[#D6E4F0] hover:from-[#A8C4E0] hover:to-[#C5D8F0] text-[#2C3E50]",
+  "bg-gradient-to-br from-[#C5E8C5] to-[#D8ECD8] hover:from-[#A8D8A8] hover:to-[#C5E8C5] text-[#2F4F4F]",
+  "bg-gradient-to-br from-[#E0D8C5] to-[#E6DFD1] hover:from-[#D0C0A8] hover:to-[#E0D8C5] text-[#5D4037]",
+  "bg-gradient-to-br from-[#C5E8E8] to-[#D1EDED] hover:from-[#A8D8D8] hover:to-[#C5E8E8] text-[#006064]",
+];
 interface PageProps {
   params: {
     department: string;
@@ -11,91 +26,240 @@ interface PageProps {
   };
 }
 
-export default function SubDepartmentPage({ params }: PageProps) {
+// Custom service cards for Canshuuraha section
+const taxServices = [
+  {
+    id: "diiwaan-geli",
+    title: "Diiwaan geli Canshuurta",
+    description: "Is diiwaan geli si aad u hesho adeegyada canshuurta",
+    icon: FileText,
+    href: "diiwaan-geli",
+  },
+  {
+    id: "bixi",
+    title: "Bixi Canshuurta",
+    description: "Siyaabaha loo bixiyo canshuurta",
+    icon: CreditCard,
+    href: "bixi",
+  },
+  {
+    id: "dhimista",
+    title: "Codso Dhimista Canshuurta",
+    description: "Codsiga dhimista ama ka dhaafida canshuurta",
+    icon: Percent,
+    href: "dhimista",
+  },
+  {
+    id: "macluumaad",
+    title: "Macluumaadka Canshuur bixiyaha",
+    description: "Cusbooneysii macluumaadkaaga",
+    icon: Receipt,
+    href: "macluumaad",
+  },
+  {
+    id: "elektaroonik",
+    title: "Canshuur bixinta Elektaroonigga",
+    description: "Iska diiwaan geli adeega elektaroonigga",
+    icon: Calculator,
+    href: "elektaroonik",
+  },
+  {
+    id: "qiimaha",
+    title: "Qiimaha Canshuuraha",
+    description: "Eeg qiimaha iyo qaybaha kala duwan",
+    icon: Building2,
+    href: "qiimaha",
+  },
+];
+
+export default function SubdepartmentPage({ params }: PageProps) {
   const department = navigationData.find(
     (dept) => dept.id === decodeURIComponent(params.department)
   );
-  const subDepartment = department?.items?.find(
+  const subdepartment = department?.items?.find(
     (subDept) => subDept.id === decodeURIComponent(params.subDept)
   );
+  console.log(params);
 
-  if (!department || !subDepartment) {
+  if (!department || !subdepartment) {
     notFound();
   }
 
-  return (
-    <div className="container mx-auto  ">
-        <div className="mb-3 ">
-                <Breadcrumb items={[  { label: department.title,href: `/departments/${encodeURIComponent(params.department)}`  }, { label: subDepartment.title }]} />
-              </div>
-      {subDepartment.title === "Canshuuraha" ? (
-        <Canshuurta />
-      ) : (
-        <div className="py-5">
-          <h1 className="text-2xl font-bold text-primary mb-4">
-            {subDepartment.title}
+  // Special layout for Canshuuraha section
+  if (subdepartment.id === "canshuuraha") {
+    return (
+      <div>
+        <div className="mb-8">
+          <h1 className="text-3xl font-bold text-primary">
+            {subdepartment.title}
           </h1>
-          <div className="prose prose-lg max-w-2xl space-y-3">
-          <p className="lead">
-            The Benadir Regional Administration has unveiled its comprehensive strategy for sustainable development,
-            marking a significant step forward in its commitment to the region&apos;s progress and prosperity.
-          </p>
-
-          <h2 className="font-semibold text-2xl">Strategic Vision for Development</h2>
-          <p>
-            Under the leadership of Governor Omar Mohamud Finnish, the administration has outlined a multi-faceted
-            approach to address key challenges facing the region. This initiative encompasses infrastructure
-            development, public service enhancement, and economic growth strategies, all designed to create lasting
-            positive impact for residents.
-          </p>
-
-          <h2 className="font-semibold text-2xl">Infrastructure and Public Services</h2>
-          <p>
-            The administration&apos;s focus on infrastructure development includes major road rehabilitation projects,
-            improvements to water supply systems, and the modernization of waste management facilities. These projects
-            are designed to enhance the quality of life for residents while creating a foundation for sustainable urban
-            growth.
-          </p>
-
-          <blockquote>
-            &quot;Our commitment to delivering durable solutions is unwavering. We are focused on creating lasting positive
-            change that will benefit generations to come.&quot; - Omar Mohamud Finnish, Governor of Benadir Region
-          </blockquote>
-
-          <h2 className="font-semibold text-2xl">Community Engagement and Participation</h2>
-          <p>
-            A key aspect of the administration&apos;s approach is its emphasis on community engagement. Through regular town
-            halls and community consultations, residents are actively involved in the planning and implementation of
-            development projects, ensuring that initiatives align with community needs and priorities.
-          </p>
+          <p className="text-[#5A6A7E] mt-2">{subdepartment.description}</p>
         </div>
 
-        {/* Tags */}
-        <div className="mt-8 flex flex-wrap gap-2">
-          <Link
-            href="#"
-            className="inline-flex items-center rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-800 hover:bg-gray-200"
-          >
-            Development
-          </Link>
-          <Link
-            href="#"
-            className="inline-flex items-center rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-800 hover:bg-gray-200"
-          >
-            Infrastructure
-          </Link>
-          <Link
-            href="#"
-            className="inline-flex items-center rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-800 hover:bg-gray-200"
-          >
-            Community
-          </Link>
+        <div className="grid grid-cols-1 md:grid-cols-2  gap-6">
+          {taxServices.map((service, index) => (
+            <Link
+              key={service.id}
+              href={`/departments/${encodeURIComponent(
+                params.department
+              )}/${encodeURIComponent(params.subDept)}/${service.id}`}
+            >
+              <Card
+                className={cn(
+                  "group relative block py-6 px-6 rounded transition-all duration-300 ",
+                  "transform hover:-translate-y-1",
+                  "border border-gray-100",
+                  "shadow-[0_2px_8px_rgba(0,0,0,0.05)]",
+                  "hover:shadow-[0_8px_16px_rgba(0,0,0,0.06)]",
+                  gradientClasses[index % gradientClasses.length]
+                )}
+              >
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-white/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                {/* Content */}
+                <div className="relative flex justify-between gap-5 items-center">
+                  <div>
+                    <h2 className="text-2xl font-semibold  group-hover:opacity-90 transition-opacity">
+                      {service.title}
+                    </h2>
+                  </div>
+                  {service.icon && (
+                    <service.icon
+                      size={60}
+                      className="font-extralight opacity-85"
+                    />
+                  )}
+                </div>
+
+                {/* Bottom Shine */}
+                <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+              </Card>
+            </Link>
+          ))}
         </div>
+      </div>
+    );
+  }
+
+  // Default layout for other subdepartments
+  return (
+    <div className="px-2 md:px-10  ">
+      <div className="">
+        <h1 className="text-3xl mb-4 font-bold text-primary">
+          {subdepartment.title}
+        </h1>
+        <div className="space-y-5">
+        <p className="text-gray-700 leading-relaxed">
+          Waaxda Maamulka iyo Maaliyadda ee Maamulka Gobolka Banaadir waa
+          xudunta nidaamka maaraynta iyo dhaqaalaha ee gobolka. Waaxdan waxay ka
+          shaqeysaa dejinta, hirgelinta, iyo kormeerka siyaasadaha iyo
+          hab-raacyada lagu maareeyo maamulka iyo maaliyadda gobolka, iyada oo
+          xooga saareysa hufnaanta, isla xisaabtanka, iyo daah-furnaanta.
+        </p>
+        <h2 className="text-2xl font-semibold text-primary">Hadafka Waaxda</h2>
+        <p className="text-gray-700 leading-relaxed">
+          Hadafka ugu weyn ee Waaxda Maamulka iyo Maaliyadda waa in la hubiyo in
+          kheyraadka maaliyadeed ee Gobolka Banaadir si hufan, mas’uuliyad leh,
+          iyo waafaqsan xeerarka dowladda loo adeegsado, looguna adeegayo
+          bulshada gobolka.
+        </p>
+        <h2 className="text-2xl font-semibold text-primary">
+          Waajibaadka iyo Shaqooyinka Waaxda
+        </h2>
+        <ul className="list-disc list-inside space-y-2 text-gray-700">
+          <li>Diyaarinta miisaaniyadda sanadlaha ah ee Gobolka Banaadir.</li>
+          <li>La socodka iyo xakamaynta kharashaadka iyo dakhliga maamulka.</li>
+          <li>
+            Hubinta in dhammaan waaxyaha kala duwan ay u hoggaansamaan shuruucda
+            maaliyadeed iyo xeerarka dowladda.
+          </li>
+          <li>
+            Hirgelinta nidaamyo casri ah oo lagu maareeyo xisaabaadka iyo
+            warbixinaha maaliyadeed.
+          </li>
+          <li>
+            Xoojinta isla xisaabtanka gudaha ee hay’adaha kala duwan ee Gobolka
+            Banaadir.
+          </li>
+          <li>
+            Ka qayb qaadashada horumarinta hababka maaraynta shaqaalaha iyo
+            kheyraadka aadanaha.
+          </li>
+          <li>
+            Kormeerka iyo xaqiijinta in adeegyada bulshada loo maareeyo si
+            waafaqsan miisaaniyadda la ansixiyay.
+          </li>
+        </ul>
+        <h2 className="text-2xl font-semibold text-primary">
+          Muhiimadda Waaxda
+        </h2>
+        <p className="text-gray-700 leading-relaxed">
+          Waaxda Maamulka iyo Maaliyadda waa laf-dhabarta hubisa in maamulka
+          Gobolka Banaadir uu ku shaqeeyo nidaam maamul-wanaag leh, isla
+          markaana la hubiyo in dhammaan kheyraadka iyo hantida dowladdu si
+          waafaqsan sharciga loo maamulo. Waa waaxda mas’uulka ka ah dhismaha
+          nidaam daah-furan oo bulshada la wadaagto warbixinaha ku saabsan
+          isticmaalka hantida guud.
+        </p>
+        <h2 className="text-2xl font-semibold text-primary">
+          La Xiriir Waaxda
+        </h2>
+        <p className="text-gray-700 leading-relaxed">
+          Haddii aad u baahato warbixin dheeraad ah ama aad qabto su’aalo ku
+          saabsan adeegyada Waaxda Maamulka iyo Maaliyadda, fadlan la xiriir
+          xafiiska gobolka ama booqo xarunta Aqalka Dowladda Hoose ee
+          Xamarweyne, Muqdisho.
+        </p>{" "}
+        </div>
+      </div>
+
+      {subdepartment.services && (
+        <div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {subdepartment.services.map((service, index) => (
+              <Link
+                key={service.id}
+                href={`/departments/${encodeURIComponent(
+                  params.department
+                )}/${encodeURIComponent(params.subDept)}/${encodeURIComponent(
+                  service.id
+                )}`}
+              >
+                <Card
+                  className={cn(
+                    "group relative block py-6 px-6 rounded transition-all duration-300 ",
+                    "transform hover:-translate-y-1",
+                    "border border-gray-100",
+                    "shadow-[0_2px_8px_rgba(0,0,0,0.05)]",
+                    "hover:shadow-[0_8px_16px_rgba(0,0,0,0.06)]",
+                    gradientClasses[index % gradientClasses.length]
+                  )}
+                >
+                  <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-white/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                  {/* Content */}
+                  <div className="relative flex justify-between gap-5 items-center">
+                    <div>
+                      <h2 className="text-3xl font-semibold  group-hover:opacity-90 transition-opacity">
+                        {service.title}
+                      </h2>
+                    </div>
+                    {service.icon && (
+                      <service.icon
+                        size={60}
+                        className="font-extralight opacity-85"
+                      />
+                    )}
+                  </div>
+
+                  {/* Bottom Shine */}
+                  <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+                </Card>
+              </Link>
+            ))}
+          </div>
         </div>
       )}
-      {/* Add your sub-department specific content here */}
     </div>
   );
 }
-
-// export default SubDepartmentPage;

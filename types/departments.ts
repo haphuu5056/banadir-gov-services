@@ -17,6 +17,8 @@ export interface Department {
   className?: string
   textColor?: string
   isCompact?: boolean
+  quickLinks?: QuickLink[]
+
 }
 
 
@@ -29,6 +31,7 @@ export interface SubDepartment {
 export interface DepartmentParams {
   department: string
   subDept?: string
+  
 }
 
 export interface DepartmentData {
@@ -45,8 +48,23 @@ export interface DepartmentData {
 export interface SubDepartment {
   id: string
   title: string
+  description?: string
+  services?: Service[]
 }
-
+export interface Service {
+  id: string;
+  title: string;
+  icon: LucideIcon;
+  description: string;
+  howToApply: string;
+  requirements: string[];
+  processingTime: string;
+  fees: string;
+}
+export interface QuickLink {
+  label: string;
+  href: string;
+}
 export interface DepartmentParams {
   department: string
   subDept?: string

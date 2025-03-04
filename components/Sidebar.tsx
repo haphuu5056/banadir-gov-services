@@ -24,16 +24,16 @@ const Sidebar = () => {
       <nav className="h-full overflow-y-auto bg-gradient-to-b from-[#F1F1FB] to-[#ebedf5] rounded-md border border-[#E4E7EC] shadow-sm ">
         <div>
           {currentDep.map((department, index) => (
-            <div className="px-8 " key={index}>
+            <div className="px-6 " key={index}>
               <div className="flex justify-between items-center gap-4 py-1 rounded-md border-b">
                 <Link
                   href={`/departments/${department.id}/`}
-                  className=" text-[#3F479E] max-w-lg text-2xl font-semibold py-4 "
+                  className=" text-[#3F479E] max-w-lg text-xl font-medium py-3 "
                 >
                   {department.title}
                 </Link>
                 <ChevronDown
-                  size={33}
+                  size={25}
                   className={`text-[#3F479E] transition-transform duration-300 cursor-pointer ${
                     openDepartment ? "rotate-180" : "rotate-0"
                   }`}
