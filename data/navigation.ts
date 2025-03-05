@@ -31,6 +31,7 @@ import {
   BadgeDollarSign,
   UserPlus,
   DollarSign,
+  Shield,
 } from "lucide-react";
 
 export const navigationData: Department[] = [
@@ -58,14 +59,17 @@ export const navigationData: Department[] = [
       {
         id: "amniga",
         title: "Amniga iyo deriseynta",
+        icon: Shield,
       },
       {
         id: "siyaasada",
         title: "Siyaasada iyo Dimoqraadiyada",
+        icon: UserPlus,
       },
       {
         id: "warfaafinta",
         title: "Warfaafinta",
+        icon: Newspaper,
       },
     ],
 
@@ -126,34 +130,34 @@ export const navigationData: Department[] = [
         title: "Biyaha iyo Degaanka",
         icon: Droplet,
       },
-      // {
-      //   id: "kaluumaysiga",
-      //   title: "Kaluumaysiga",
-      // },
-      // {
-      //   id: "beeraha",
-      //   title: "Beeraha iyo jardiinooyinka",
-      // },
-      // {
-      //   id: "baahiyaha",
-      //   title: "Baahiyaha gaarka",
-      // },
-      // {
-      //   id: "xiriirka",
-      //   title: "Xiriirka Dadweynaha",
-      // },
-      // {
-      //   id: "daddhlgista",
-      //   title: "Daddhlgista",
-      // },
-      // {
-      //   id: "xaquuqul-insaanka",
-      //   title: "Xaquuqul insaanka",
-      // },
-      // {
-      //   id: "fanka",
-      //   title: "Fanka iyo Suugaanta",
-      // },
+      {
+        id: "kaluumaysiga",
+        title: "Kaluumaysiga",
+      },
+      {
+        id: "beeraha",
+        title: "Beeraha iyo jardiinooyinka",
+      },
+      {
+        id: "baahiyaha",
+        title: "Baahiyaha gaarka",
+      },
+      {
+        id: "xiriirka",
+        title: "Xiriirka Dadweynaha",
+      },
+      {
+        id: "daddhigista",
+        title: "Daddhigista",
+      },
+      {
+        id: "xaquuqul-insaanka",
+        title: "Xaquuqul insaanka",
+      },
+      {
+        id: "fanka",
+        title: "Fanka iyo Suugaanta",
+      },
     ],
   },
   {

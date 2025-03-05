@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { navigationData } from "@/data/navigation";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import {
   CreditCard,
   FileText,

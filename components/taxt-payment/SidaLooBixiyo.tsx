@@ -1,5 +1,4 @@
-import { Alert, AlertDescription } from "@/components/ui/alert"
-import { InfoIcon } from "lucide-react"
+
 
 export function SidaLooBixiyo() {
   return (

@@ -1,4 +1,3 @@
-import React from 'react'
 
 export const Cabashooyinka = () => {
   return (
@@ -10,7 +9,7 @@ export const Cabashooyinka = () => {
             <div>
               <h3 className="font-medium">Waa Maxay Cabshooyinka?</h3>
               <p className="text-muted-foreground">
-                Cabshooyinka waa qaybta dawladda ee bixisa adeegyada muhiimka ah ee bulshada. Waaxdani waxay mas'uul ka
+                Cabshooyinka waa qaybta dawladda ee bixisa adeegyada muhiimka ah ee bulshada. Waaxdani waxay mas&apos;uul ka
                 tahay hubinta in dhammaan muwaadiniinta ay helaan adeegyada aasaasiga ah ee ay u baahan yihiin si ay u
                 horumariyaan noloshooda. Waxaan bixinaa adeegyo kala duwan oo laga bilaabo daryeelka caafimaadka ilaa
                 waxbarashada iyo amniga dadweynaha.
@@ -31,7 +30,7 @@ export const Cabashooyinka = () => {
               <h3 className="font-medium">Qaab-dhismeedka</h3>
               <p className="text-muted-foreground">
                 Cabshooyinka waxaa hogaamiya Agaasimaha Guud iyo koox maamul oo khibrad leh. Waaxdu waxay ka kooban
-                tahay shan qaybood oo kala duwan, mid kastana waxay mas'uul ka tahay bixinta adeegyo gaar ah. Dhammaan
+                tahay shan qaybood oo kala duwan, mid kastana waxay mas&apos;uul ka tahay bixinta adeegyo gaar ah. Dhammaan
                 shaqaalaha waaxda waxay heleen tababar heer sare ah si ay u bixiyaan adeegyo tayo sare leh. Waxaan si
                 joogto ah u qiimeynaa oo u hagaajinaa adeegyadeena si aan ugu adeegno baahiyaha bulshadeena si
                 wanaagsan.
@@ -43,9 +42,9 @@ export const Cabashooyinka = () => {
               <p className="text-muted-foreground">
                 Miisaaniyadda sannadlaha ah ee Cabshooyinka waa $15 milyan, 70% waxaa loo qoondeeyay adeegyada aasaasiga
                 ah, 20% kaabayaasha dhaqaalaha, iyo 10% horumarinta bulshada. Dhammaan diiwaannada maaliyadeed iyo
-                go'aannada waaxda ayaa si cad loogu heli karaa bogga internetka ee hufnaanta. Waxaan si buuxda u
+                go&apos;aannada waaxda ayaa si cad loogu heli karaa bogga internetka ee hufnaanta. Waxaan si buuxda u
                 dhaqannay nidaamka isla-xisaabtanka iyo hufnaanta si aan u hubinno in kheyraadka dadweynaha loo
-                isticmaalo si mas'uuliyad leh.
+                isticmaalo si mas&apos;uuliyad leh.
               </p>
             </div>
           </div>
@@ -127,7 +126,7 @@ export const Cabashooyinka = () => {
             <div>
               <h3 className="font-medium">Iimaylka</h3>
               <p className="text-muted-foreground">
-                Su'aalaha Guud: info@cabshooyinka.gov
+                Su&apos;aalaha Guud: info@cabshooyinka.gov
                 <br />
                 Codsiyada Adeegga: adeegyada@cabshooyinka.gov
                 <br />

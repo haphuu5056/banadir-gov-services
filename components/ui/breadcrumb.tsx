@@ -59,13 +59,17 @@ const BreadcrumbItem = React.forwardRef<HTMLLIElement, BreadcrumbItemProps>(
 BreadcrumbItem.displayName = "BreadcrumbItem"
 
 const BreadcrumbLink = React.forwardRef<HTMLAnchorElement, BreadcrumbLinkProps>(
-  ({ className, children, ...props }, ref) => {
-    return (
-      <Link ref={ref} className={cn("hover:text-foreground transition-colors", className)} {...(props as any)}>
+  ({ className, children, asChild, ...props }, ref) => {
+    return asChild ? (
+      <span ref={ref} className={cn("hover:text-foreground transition-colors", className)} {...props}>
+        {children}
+      </span>
+    ) : (
+      <Link {...props} href={props.href || "#"} className={cn("hover:text-foreground transition-colors", className)}>
         {children}
       </Link>
     )
-  },
+  }
 )
 BreadcrumbLink.displayName = "BreadcrumbLink"
 

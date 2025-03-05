@@ -4,7 +4,7 @@ export function DirectDebit() {
       <h2 className="text-2xl font-bold text-[#3F479E]">Direct Debit</h2>
       <p className="text-gray-600">Direct Debit waa hab fudud oo toos ah oo bil walba lacagta lagaaga jari doono:</p>
       <div>
-        <h3 className="font-semibold mb-2">Faa'iidooyinka</h3>
+        <h3 className="font-semibold mb-2">Faa&apos;iidooyinka</h3>
         <ul className="space-y-2">
           {[
             "Wax lacag ah lagaama jari doono ilaa taariikhda la isku raacay",

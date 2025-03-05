@@ -47,8 +47,8 @@ const subdepartmentInfo: Record<string, string[]> = {
     "Audit Information",
   ],
   canshuuraha: [
+    "Forms",
     "Tax Rates",
-    "Filing Deadlines",
     "Business Tax Guide",
   ],
   qasnadda: [
@@ -79,6 +79,16 @@ export function RelatedInfoMenu({ department, subDept }: RelatedInfoMenuProps) {
       </CardHeader>
       <CardContent>
         <nav className="flex flex-col space-y-2">
+          
+          {links?.map((link, index) => (
+            <Link
+              key={index}
+              href="#"
+              className=" text-gray-600 text-lg hover:text-[#3F479E] hover:underline"
+            >
+              {link}
+            </Link>
+          ))}
           <Link
             href="#"
             className=" text-gray-600 text-lg hover:text-[#3F479E] hover:underline"
@@ -90,17 +100,8 @@ export function RelatedInfoMenu({ department, subDept }: RelatedInfoMenuProps) {
             href="#"
             className=" text-gray-600 text-lg hover:text-[#3F479E] hover:underline"
           >
-            Downloads
+            Events
           </Link>
-          {links?.map((link, index) => (
-            <Link
-              key={index}
-              href="#"
-              className=" text-gray-600 text-lg hover:text-[#3F479E] hover:underline"
-            >
-              {link}
-            </Link>
-          ))}
         </nav>
       </CardContent>
     </Card>
