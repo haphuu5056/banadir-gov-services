@@ -43,7 +43,6 @@ export default function SignUpForm() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (validateForm()) {
-      // Proceed with sign-up logic (e.g., API request)
       router.push("/sign-in");
     }
   };
@@ -74,7 +73,6 @@ export default function SignUpForm() {
           {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
         </div>
 
-        {/* Email Input */}
         <div className="mb-4">
           <label className="block text-sm font-medium text-gray-700 mb-1">
             Email
@@ -92,7 +90,6 @@ export default function SignUpForm() {
           )}
         </div>
 
-        {/* Password Input */}
         <div className="mb-4">
           <label className="block text-sm font-medium text-gray-700 mb-1">
             Password
@@ -110,7 +107,6 @@ export default function SignUpForm() {
           )}
         </div>
 
-        {/* Confirm Password Input */}
         <div className="mb-6">
           <label className="block text-sm font-medium text-gray-700 mb-1">
             Confirm Password
@@ -128,7 +124,6 @@ export default function SignUpForm() {
           )}
         </div>
 
-        {/* Submit Button */}
         <button
           type="submit"
           className="w-full p-3 bg-primary text-white rounded-lg font-semibold focus:ring-2 focus:ring-blue-400 focus:outline-none transition"

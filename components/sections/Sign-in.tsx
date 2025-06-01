@@ -12,13 +12,11 @@ export default function SignInForm() {
   const validateForm = () => {
     const newErrors: Record<string, string> = {};
 
-    // Email validation
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (!emailPattern.test(email)) {
       newErrors.email = "Invalid email format.";
     }
 
-    // Password validation (minimum 8 characters)
     if (password.length < 8) {
       newErrors.password = "Password must be at least 8 characters.";
     }
@@ -30,13 +28,12 @@ export default function SignInForm() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (validateForm()) {
-      setLoading(true); // Start loading
+      setLoading(true); 
 
-      // Simulate async request
       setTimeout(() => {
         setLoading(false);
         router.push("/");
-      }, 2000); // Mock a delay of 2 seconds
+      }, 2000); 
     }
   };
 

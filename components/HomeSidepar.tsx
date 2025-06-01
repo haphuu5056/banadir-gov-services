@@ -10,7 +10,6 @@ export default function Sidebar() {
 
   return (
     <div className="w-full max-w-xs">
-      {/* Sidebar Header (Toggle Button) */}
       <button
         onClick={() => setIsOpen(!isOpen)}
         className={cn(
